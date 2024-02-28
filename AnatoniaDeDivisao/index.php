@@ -10,6 +10,8 @@
     <?php 
         $dividendo = $_GET['dividendo'];
         $divisor = $_GET['divisor'];
+        $quociente = (int) ($dividendo / $divisor);
+        $resto = $dividendo % $divisor;
     ?>
     <section>
         <h1>Anatonia de Divisão</h1>
@@ -24,8 +26,13 @@
     <section>
         <h2>Estrutura da Divisão:</h2>
         <?php 
-            $quociente = $dividendo / $divisor;
-            echo "O dividendo é: $dividendo </br> O divisor é: $divisor </br> O quociente é: $quociente";    
+            
+            echo "<ul>";
+            echo "<li>Dividendo: $dividendo</li>";
+            echo "<li>Divisor: $divisor</li>";
+            echo "<li>Quociente: $quociente</li>";
+            echo "<li>Resto: $resto</li>";  
+            echo "</ul>";
         ?>
     </section>
    
